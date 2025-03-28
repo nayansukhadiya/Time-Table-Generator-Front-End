@@ -68,7 +68,7 @@ const AddCourses: React.FC = () => {
     <div className='container mx-auto max-w-md p-4'>
       <Card>
         <CardHeader>
-          <CardTitle className='text-center'>Course Details</CardTitle>
+          <CardTitle className='text-center text-2xl font-bold'>Course Details</CardTitle>
         </CardHeader>
         <CardContent>
           <div className='grid gap-4'>
