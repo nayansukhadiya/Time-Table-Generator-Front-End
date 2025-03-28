@@ -3,8 +3,35 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Public Sans", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Oswald", sans-serif !important; */
   line-height: 1.5;
   font-weight: 400;
 
@@ -121,7 +148,22 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+@layer base {
+  :root {
+    --animation-accordion-down: accordion-down 0.2s ease-out;
+    --animation-accordion-up: accordion-up 0.2s ease-out;
+  }
 
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

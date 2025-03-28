@@ -4,8 +4,10 @@ import Header from './components/Header/Header';
 const Layout: React.FC = () => {
   return (
     <div>
-     <Header />
+      <Header />
+      <div className='w-[90%] m-auto'>
       <Outlet />
+      </div>
     </div>
   );
 };

@@ -16,7 +16,8 @@ import {
 
 export function MenubarDemo() {
   return (
-    <Menubar className='border-none'>
+    <Menubar className='border-none z-[200] relative'>
+
       <MenubarMenu>
         <MenubarTrigger>File</MenubarTrigger>
         <MenubarContent>
@@ -42,6 +43,7 @@ export function MenubarDemo() {
           </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
+      
       <MenubarMenu>
         <MenubarTrigger>Edit</MenubarTrigger>
         <MenubarContent>
@@ -68,6 +70,7 @@ export function MenubarDemo() {
           <MenubarItem>Paste</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
+
       <MenubarMenu>
         <MenubarTrigger>View</MenubarTrigger>
         <MenubarContent>
@@ -86,6 +89,7 @@ export function MenubarDemo() {
           <MenubarItem inset>Hide Sidebar</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
+
       <MenubarMenu>
         <MenubarTrigger>Profiles</MenubarTrigger>
         <MenubarContent>
@@ -100,6 +104,7 @@ export function MenubarDemo() {
           <MenubarItem inset>Add Profile...</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
+      
     </Menubar>
   );
 }
