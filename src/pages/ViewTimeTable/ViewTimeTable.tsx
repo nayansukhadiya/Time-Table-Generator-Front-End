@@ -93,7 +93,7 @@ const ViewTimeTable = () => {
     <div className='flex min-h-screen items-center justify-center p-4'>
       <Card className='w-full max-w-6xl mx-auto'>
         <CardHeader>
-          <CardTitle className='text-2xl font-bold'>Weekly Time Table</CardTitle>
+          <CardTitle className='text-2xl '>Weekly Time Table</CardTitle>
         </CardHeader>
         <CardContent>
           <div className='flex flex-col space-y-4'>
@@ -132,10 +132,10 @@ const ViewTimeTable = () => {
                         {DAYS.map((day) => (
                           <TableCell key={`${day}-${slot}`}>
                             {data[day]?.[index] === 'Break' ? (
-                              <span className='text-red-500 font-bold'>Break</span>
+                              <span className='text-red-500'>Break</span>
                             ) : (
                               <div>
-                                <strong>{data[day]?.[index]?.course}</strong>
+                                <span>{data[day]?.[index]?.course}</span>
                                 <br />
                                 <small>
                                   {data[day]?.[index]?.instructor} ({data[day]?.[index]?.room})
